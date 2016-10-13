@@ -1,0 +1,41 @@
+@CHARSET "ISO-8859-1";
+
+dt {
+	padding: 0 0 5px 0;
+}
+
+dd {
+	padding: 0 0 10px 10px;
+}
+
+dt label {
+	font-weight: bold;
+	font-size: 12px;
+}
+
+dt label.required:before {
+	content: "* ";
+	color: #ff0000;
+}
+
+ul.errors {
+	padding: 5px 0 5px 25px;
+	color: #ff0000;
+}
+
+table.spreadsheet {
+	margin: 10px 0;
+	border: #999 1px solid;
+}
+
+table.spreadsheet th {
+	background: #ccc;
+	font-weight: bold;
+	font-size: 12px;
+	padding: 5px 2px;
+}
+
+table.spreadsheet td {
+	border-top: #999 1px solid;
+	padding: 5px 2px;
+}

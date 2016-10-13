@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skin>
+	<stylesheets>
+		<stylesheet>layout.css</stylesheet>
+		<stylesheet>text.css</stylesheet>
+		<stylesheet>form.css</stylesheet>
+		<stylesheet>nav.css</stylesheet>
+	</stylesheets>
+</skin>

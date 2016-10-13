@@ -1,0 +1,29 @@
+<?php 
+// get the default db adapter
+$db = Zend_Db_Table::getDefaultAdapter();
+$profiler = $db->getProfiler();
+if($profiler->getEnabled() && $profiler->getTotalNumQueries() > 0) { ?>
+<div style='text-align:center'>
+<h2>Database Profiling Report</h2>
+    <p>Total queries executed: <?php echo $profiler->getTotalNumQueries()?></p>
+    <p>Total elapsed time: <?php echo $profiler->getTotalElapsedSecs()?></p>
+</div>
+<table class='spreadsheet' cellpadding='0' cellspacing='0' style='margin:10px auto'>
+	<thead>
+		<tr>
+			<th>#</th>
+			<th>Query</th>
+			<th>Time</th>
+		</tr>
+	</thead>
+	<tbody>
+<?php foreach ($profiler->getQueryProfiles() as $queryNumber => $query) { ?>
+	<tr>
+		<td>(<?php echo $queryNumber + 1?>)</td>
+		<td><?php echo $query->getQuery();?></td>
+		<td><?php echo $query->getElapsedSecs();?></td>
+	</tr>
+<?php }?>
+</tbody>
+</table>
+<?php }?>

@@ -1,0 +1,15 @@
+<h2>Current Pages</h2>
+<?php
+if($this->pages != null) {
+?>
+<table class='spreadsheet' cellpadding='0' cellspacing='0'>
+    <tr>
+        <th>Links</th>
+        <th>Name</th>
+    </tr>
+    <?php echo $this->partialLoop('partials/_page-row.phtml', $this->pages); ?>
+</table>
+<?php }else{?>
+<p>You do not have any pages yet.</p>
+<?php }?>
+<p><a href='/page/create'>Create a new page</a></p>

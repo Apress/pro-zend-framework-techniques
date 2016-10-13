@@ -1,0 +1,9 @@
+<h2>Search Results</h2>
+<?php if(is_array($this->results) && count($this->results) > 0) { ?>
+<p>Your search for <em><?php echo $this->keywords; ?></em> returned <?php echo count($this->results); ?> results.</p>
+<?php foreach ($this->results as $result) { ?>
+<h3><a href='/page/open/title/<?php echo $result->page_name; ?>'><?php echo $result->page_headline; ?></a></h3>
+<p><?php echo $result->page_description; ?></p>
+<?php }} else {?>
+<p>Your search did not return any results</p>
+<?php }?>

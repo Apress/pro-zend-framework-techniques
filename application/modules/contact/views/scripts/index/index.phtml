@@ -1,0 +1,9 @@
+<h2>Contact Us</h2>
+<?php if($this->messageProcessed && $this->sendError) { ?>
+	<p>Sorry there was an error sending your message. Please contact support@somedomain.com for more help.</p>
+<?php } elseif ($this->messageProcessed &! $this->sendError) {?>
+	<p>Thank you for contacting us. We will be in touch soon.</p>
+<?php } else { ?>
+	<p>To send us a message please complete the form below and click Send Message.</p>
+    <?php echo $this->form;
+}

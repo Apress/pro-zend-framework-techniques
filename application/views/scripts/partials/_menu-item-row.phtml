@@ -1,0 +1,21 @@
+<?php
+    if($this->page_id > 0) {
+        $page = new CMS_Content_Item_Page($this->page_id);
+        $pageName = $page->name;
+    }else{
+        $pageName = null;
+    }
+?>
+<tr>
+    <td class='links'>
+        <a href='/menuitem/update/id/<?php echo $this->id;?>'>Update</a> |
+        <a href='/menuitem/move/direction/up/id/<?php echo $this->id;?>'>
+           Move up</a> |
+        <a href='/menuitem/move/direction/down/id/<?php echo $this->id;?>'>
+           Move down</a> |
+        <a href='/menuitem/delete/id/<?php echo $this->id;?>'>Delete</a>
+    </td>
+    <td><?php echo $this->label ?></td>
+    <td><?php echo $pageName ?></td>
+    <td><?php echo $this->link ?></td>
+</tr>

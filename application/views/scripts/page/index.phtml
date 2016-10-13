@@ -1,0 +1,27 @@
+<h2>Featured Content</h2>
+<?php
+if($this->featuredItems) {
+    foreach ($this->featuredItems as $page) {
+?>
+<div class='featuredItem'>
+    <h3><a href='/page/open/id/<?php echo $page->id; ?>'>
+        <?php echo $page->headline?></a></h3>
+    <img src='<?php echo $page->image;?>' alt='<?php echo $page->headline?>' / >
+    <p><?php echo $page->description; ?></p>
+    <br style='clear:left;'  />
+</div>
+<?php
+ }
+}
+
+if($this->recentPages) { ?>
+<div class='featuredItem ''recentPages'>
+    <h3>More Pages</h3>
+    <ul>
+    <?php foreach ($this->recentPages as $page) {?>
+    <li><a href='/page/open/id/<?php echo $page->id; ?>'>
+        <?php echo $page->headline?></a></li>
+    <?php } ?>
+    </ul>
+</div>
+<?php } ?>

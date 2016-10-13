@@ -1,0 +1,25 @@
+@CHARSET "ISO-8859-1";
+
+#nav ul {
+	list-style: none;
+}
+
+#nav ul li {
+	display: inline;
+	padding: 0 20px;
+}
+
+#nav ul li a {
+	font-family: "Arial Black";
+	color: #FCE6C8;
+	font-size: 16px;
+	text-decoration: none;
+}
+
+#nav ul li a:hover {
+	color: #fff;
+}
+
+#nav ul li a.selected {
+	font-weight: bold;
+}
